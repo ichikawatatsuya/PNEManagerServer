@@ -5,8 +5,10 @@ var domainUrl = location.protocol + '//' + location.hostname + '/';
 
 var domainValid = false;
 var mailValid = false;
+var pfValid = false;
+var touValid = false;
 var enabled = function() {
-  if (domainValid && mailValid) {
+  if (domainValid && mailValid && pfValid && touValid) {
     $("#sendbutton2").removeAttr("disabled");
   } else {
     $("#sendbutton2").attr("disabled", "true");
@@ -15,12 +17,6 @@ var enabled = function() {
 
 $('#sendbutton2').click( function() {
   sendForm();
-});
-
-$('#select-mode').change( function() {
-  var mode = $('#select-mode option:selected').val();
-  $('#mode-description').children().hide();
-  $('#' + mode + '-mode').show();
 });
 
 $(function(){
@@ -67,7 +63,53 @@ $(function(){
     }
   });
 
+  $("#pfcheck").bind("click", function(e){
+    if($("#pfcheck").attr("checked") == null) {
+      pfValid = false;
+    } else  {
+      pfValid = true;
+    }
+    enabled();
+  });
+
+  $("#toucheck").bind("click", function(e){
+    if($("#toucheck").attr("checked") == null) {
+      touValid = false;
+    } else  {
+      touValid = true;
+    }
+    enabled();
+  });
+
+  $('#select-mode').change( function() {
+    var mode = $('#select-mode option:selected').val();
+    $('#mode-description').children().hide();
+    $('#' + mode + '-mode').show();
+
+    $('.backstretch:not(.backstretch:last)').remove();
+    $('#photoCredit > *').remove();
+
+    switch (mode)
+    {
+      case 'plane':
+        $.backstretch('img/SNCF_TGV_PSE_Viaduc_de_Cize_-_Bolozon_blur.jpg', {speed: 1000});
+        $('#photoCredit').append('<p>photo by : <a target="_blank" href="http://www.bahnbilder.ch">Kabelleger / David Gubler</a></p>');
+        break;
+      case 'renrakumou':
+        $.backstretch('img/Washington_Dulles_International_Airport_at_Dusk_blur.jpg', {speed: 1000});
+        $('#photoCredit').append('<p>photo by : <a target="_blank" href="http://commons.wikimedia.org/wiki/File:Washington_Dulles_International_Airport_at_Dusk.jpg">Joe Ravi</a></p>');
+        break;
+      case 'support':
+        $.backstretch('img/ST_vs_Gloucester_-_Match_-_23_blur.jpg', {speed: 1000});
+        $('#photoCredit').append('<p>photo by : <a target="_blank" href="http://commons.wikimedia.org/wiki/File:ST_vs_Gloucester_-_Match_-_23.JPG">PierreSelim</a></p>');
+        break;
+      default:
+        $.backstretch('bg1.png', {speed: 1000});
+        break;
+    }
+  });
 });
+
 function sendForm() {
   $.ajax({
     type: "POST",

@@ -17,7 +17,7 @@
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar" style="top:0; z-index:1030;">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -32,11 +32,11 @@
 
     <div class="container">
         <div class="row">
-        	<div class="span6">
-        		<div class="register-info-wraper">
-        			<div id="register-info">
-				        <!--<h1>無料</h1><h2>から</h2><h1>はじめる<br />会員制コミュニティ</h1><h2>運営ツール</h2>-->
-				        <h1>無料からはじめる<br />会員制コミュニティ運営ツール</h1>
+          <div class="span6">
+            <div class="register-info-wraper">
+              <div id="register-info">
+                <!--<h1>無料</h1><h2>から</h2><h1>はじめる<br />会員制コミュニティ</h1><h2>運営ツール</h2>-->
+                <h1>無料からはじめる<br />会員制コミュニティ運営ツール</h1>
 
                 <div id="mode-description">
                   <span id="plane-mode">
@@ -85,26 +85,26 @@
                     </ul>
                   </div>
                 </div>
-        			</div>
-        		</div>
+              </div>
+            </div>
 
-        	</div>
+          </div>
 
-        	<div class="span6">
-			<div id="register-wraper">
-			    <div id="register-form" class="form">
-				<legend>Register to <span class="blue">xpne.info</span></legend>
-			    
-				<div class="body">
-					<div class="left">
-					  <span>Domain</span>
-					</div>
-					<input id="domain-form" class="input-huge" type="text"><br />
-					<div id="available">&nbsp;</div>
-					<!-- email -->
-					<label class="left">E-mail</label>
-					<input id="mail-form" class="input-huge" type="text">
-					<!-- mode -->
+          <div class="span6">
+      <div id="register-wraper">
+        <div id="register-form" class="form">
+        <legend>Register to <span class="blue">xpne.info</span></legend>
+
+        <div class="body">
+          <div class="left">
+            <span>Domain</span>
+          </div>
+          <input id="domain-form" class="input-huge" type="text"><br />
+          <div id="available">&nbsp;</div>
+          <!-- email -->
+          <label class="left">E-mail</label>
+          <input id="mail-form" class="input-huge" type="text">
+          <!-- mode -->
           <div class="options">
             <label class="left" id="mode-select">Mode Select</label>
             <select id="select-mode" name="mode">
@@ -117,21 +117,40 @@
             <br /><br />
           </div>
 
-				</div>
-			    
-				<div class="footer">
-				    <button class="btn btn-success" id="sendbutton2" disabled="disabled">Register</button>
-				</div>
-			    </div>
-			</div>
-        	</div>
         </div>
+
+        <div class="footer">
+          <div id="check-wrapper">
+            <input type="checkbox" id="pfcheck" title="「個人情報の取り扱いについて同意する」" />
+            <label for="pfcheck"><a target="_blank" href="./privacyPolicy.html">個人情報</a>の取り扱いについて同意する</label><br />
+            <input type="checkbox" id="toucheck" title="「利用規約に同意する」" />
+            <label for="toucheck"><a target="_blank" href="./userAgreement.html">利用規約</a>に同意する</label><br />
+          </div>
+          <button class="btn btn-success" id="sendbutton2" disabled="disabled">Register</button>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="Footer">
+      <div id="photoCredit">
+        <p>photo by : <a target="_blank" href="http://www.bahnbilder.ch">Kabelleger / David Gubler</a></p>
+      </div>
+      <div id="FooterContainer">
+        <p>
+          <a target="_blank" href="./privacyPolicy.html">プライバシーポリシー</a> 
+          <a target="_blank" href="./userAgreement.html">利用規約</a> 
+          Powered by <a href="http://www.openpne.jp/" target="_blank">OpenPNE</a>
+        </p>
+      </div>
     </div>
 
     <script type="text/javascript" charset="UTF-8" src="js/jquery.js"></script>
     <script type="text/javascript" charset="UTF-8" src="js/bootstrap.js"></script>
     <script type="text/javascript" charset="UTF-8" src="js/backstretch.min.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="js/typica-login.js"></script>
+    <!--<script type="text/javascript" charset="UTF-8" src="js/typica-login.js"></script>-->
     <script type="text/javascript" charset="UTF-8" src="js/pne.js"></script>
     <script type="text/javascript" charset="UTF-8" src="js/ribbon.js"></script>
     <script type="text/javascript" charset="UTF-8" src="js/tooltip.js"></script>

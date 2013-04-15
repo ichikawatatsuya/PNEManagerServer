@@ -9,7 +9,7 @@ html {
 
 /* line 13, ../sass/typica-login.scss */
 body {
-  background: url(../bg1.png) no-repeat center center fixed;
+  background: url(../img/SNCF_TGV_PSE_Viaduc_de_Cize_-_Bolozon_blur.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -18,7 +18,7 @@ body {
 @media (min-width: 979px) {
   /* line 13, ../sass/typica-login.scss */
   body {
-    padding-top: 80px;
+/*    padding-top: 80px; */
   }
 }
 
@@ -213,16 +213,16 @@ body {
 /* line 171, ../sass/typica-login.scss */
 .register-info-wraper {
   background: rgba(0, 0, 0, 0.2);
-  min-height: 100%;
-  height: 100%;
+  min-height: 80%;
+  height: 80%;
 }
 
 /* line 174, ../sass/typica-login.scss */
 #register-info {
   position: relative;
   padding: 20px 20px 25px 25px;
-  min-height: 100%;
-  height: 100%;
+  min-height: 80%;
+  height: 80%;
 }
 
 /* line 177, ../sass/typica-login.scss */
@@ -447,17 +447,21 @@ footer.navbar-fixed-bottom {
 }
 
 html, body {
-  min-height: 100%;
-  height: 100%;
+  min-height: 80%;
+  height: 91.5%;
 }
 
-.container, .row, .span6 {
+.container, .row{
   min-height: 100%;
   height: 100%;
 }
 
 #mode-description > span {
   display: none;
+}
+
+#mode-description > span > a {
+  color: white;
 }
 
 #mode-description {
@@ -498,5 +502,43 @@ html, body {
 
 a {
   cursor: pointer!important;
-  color: white;
+  color: #0081be;
+}
+
+#Footer {
+  margin: 0;
+  padding-top: 15px;
+  padding-right: 10px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-color: #fff;
+}
+
+#FooterContainer {
+  float: right;
+}
+
+#photoCredit {
+  margin-left: 5px;
+  font-size: 12px;
+  float: left;
+}
+
+.span6 {
+  height: 100%;
+}
+
+#check-wrapper > label {
+  display: inline;
+  font-size: 14px !important;
+}
+
+#check-wrapper {
+  text-align: left;
+  margin: 10px;
+}
+
+#pfcheck, #toucheck {
+  margin-top: 0 !important;
 }
