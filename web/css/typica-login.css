@@ -296,7 +296,7 @@ footer.white {
 /* register info */
 /* line 48, D:/DropBox/bootstrap/typica-login/sass/includes/_fonts.scss */
 #register-info h1 {
-  font-size: 36px;
+  font-size: 30px;
 /*  font-family: "PT Sans", Arial, Helvetica, sans-serif;*/
   line-height: 55px;
   font-weight: 700;
@@ -464,8 +464,12 @@ html, body {
   color: white;
 }
 
+#mode-description > span > p {
+  font-size: 15px;
+}
+
 #mode-description {
-  padding-top: 20px;
+  padding-top: 40px;
   float: left;
   width: 100%;
   color: white;
@@ -505,18 +509,9 @@ a {
   color: #0081be;
 }
 
-#Footer {
-  margin: 0;
-  padding-top: 15px;
-  padding-right: 10px;
-  left: 0;
-  right: 0;
-  height: 30px;
-  background-color: #fff;
-}
-
 #FooterContainer {
   float: right;
+  font-size: 16px;
 }
 
 #photoCredit {

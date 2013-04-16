@@ -83,6 +83,7 @@ $(function(){
 
   $('#select-mode').change( function() {
     var mode = $('#select-mode option:selected').val();
+    var insertDom = '';
     $('#mode-description').children().hide();
     $('#' + mode + '-mode').show();
 
@@ -92,20 +93,28 @@ $(function(){
     switch (mode)
     {
       case 'plane':
-        $.backstretch('img/SNCF_TGV_PSE_Viaduc_de_Cize_-_Bolozon_blur.jpg', {speed: 1000});
-        $('#photoCredit').append('<p>photo by : <a target="_blank" href="http://www.bahnbilder.ch">Kabelleger / David Gubler</a></p>');
+        $.backstretch('img/SNCF_TGV_PSE_Viaduc_de_Cize_-_Bolozon_blur2.jpg', {speed: 1000});
+        insertDom = '<p>photo by : <a target="_blank" href="http://www.bahnbilder.ch">Kabelleger / David Gubler</a></p>';
         break;
       case 'renrakumou':
-        $.backstretch('img/Washington_Dulles_International_Airport_at_Dusk_blur.jpg', {speed: 1000});
-        $('#photoCredit').append('<p>photo by : <a target="_blank" href="http://commons.wikimedia.org/wiki/File:Washington_Dulles_International_Airport_at_Dusk.jpg">Joe Ravi</a></p>');
+        $.backstretch('img/Washington_Dulles_International_Airport_at_Dusk_blur2.jpg', {speed: 1000});
+        insertDom = '<p>photo by : <a target="_blank" href="http://commons.wikimedia.org/wiki/File:Washington_Dulles_International_Airport_at_Dusk.jpg">Joe Ravi</a></p>';
         break;
       case 'support':
-        $.backstretch('img/ST_vs_Gloucester_-_Match_-_23_blur.jpg', {speed: 1000});
-        $('#photoCredit').append('<p>photo by : <a target="_blank" href="http://commons.wikimedia.org/wiki/File:ST_vs_Gloucester_-_Match_-_23.JPG">PierreSelim</a></p>');
+        $.backstretch('img/ST_vs_Gloucester_-_Match_-_23_blur2.jpg', {speed: 1000});
+        insertDom = '<p>photo by : <a target="_blank" href="http://commons.wikimedia.org/wiki/File:ST_vs_Gloucester_-_Match_-_23.JPG">PierreSelim</a></p>';
+        break;
+      case 'chat':
+        $.backstretch('img/Interior_of_St_Andrew\'s_Catholic_Church_in_Roanoke,_Virginia_blur.jpg', {speed: 1000});
+        insertDom = '<p>photo by : <a target="_blank" href="http://commons.wikimedia.org/wiki/File:Interior_of_St_Andrew%27s_Catholic_Church_in_Roanoke,_Virginia.jpg">Joe Ravi</a></p>';
         break;
       default:
         $.backstretch('bg1.png', {speed: 1000});
         break;
+    }
+    if ('' !== insertDom)
+    {
+      $('#photoCredit').append(insertDom);
     }
   });
 });

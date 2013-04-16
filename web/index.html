@@ -8,17 +8,16 @@
     <meta name="author" content="Oskar Żabik (oskar.zabik@gmail.com)">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/typica-login.css">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="img/logo.jpg">
 
   </head>
 
   <body>
 
     <div class="navbar" style="top:0; z-index:1030;">
-      <div class="navbar-inner">
+      <div class="navbar-inner" style="border-radius: 0;">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
@@ -35,47 +34,41 @@
           <div class="span6">
             <div class="register-info-wraper">
               <div id="register-info">
-                <!--<h1>無料</h1><h2>から</h2><h1>はじめる<br />会員制コミュニティ</h1><h2>運営ツール</h2>-->
                 <h1>無料からはじめる<br />会員制コミュニティ運営ツール</h1>
 
                 <div id="mode-description">
                   <span id="plane-mode">
-                    簡易的なモードです。<br />
-                    以下のプラグインがインストールされます。<br />
+                    OpenPNE標準配布版と同じ<br />
+                    プレーンコミュニティ<br />
                     <br />
-                    <a rel="tooltip" title="スキンを変更出来るプラグインです">・opSkinThemePlugin</a><br />
-                    <a rel="tooltip" title="アクティビティをさらに便利に使うためのプラグインです">・opTimelinePlugin</a><br />
-                    <a rel="tooltip" title="いいね！ボタンを追加するプラグインです">・opLikePlugin</a>
+                    <p>● 最小限のプラグインのみの構成している、プレーンなSNSです。</p>
+                    <p>● 必要なプラグインを自分で選んで、オリジナルのコミュニティを作ることができます。</p>
                   </span>
                   <span id="support-mode">
-                    サポートコミュニティ向けのモードです。<br />
-                    以下のプラグインがインストールされます。<br />
+                    ユーザー同士で質問に応える<br />
+                    サポートコミュニティ<br />
                     <br />
-                    <a rel="tooltip" title="アクティビティをさらに便利に使うためのプラグインです">・opTimelinePlugin</a><br />
-                    <a rel="tooltip" title="コミュニティを拡張し、トピックやイベントを追加するプラグインです">・opCommunityTopicPlugin</a><br />
-                    <a rel="tooltip" title="ファイルをアップデートして共有できるプラグインです">・opUploadFilePlugin</a><br />
-                    <a rel="tooltip" title="特定の人にメッセージを送ることが出来るプラグインです">・opMessagePlugin</a><br />
-                    <a rel="tooltip" title="チャット機能を加えるプラグインです">・opChatTaskPlugin</a><br />
+                    <p>● ユーザーの質問に別のユーザーが答える、コミュニティ型のサポートサイトを運営できます。</p>
                   </span>
                   <span id="standard-mode">
-                    スタンダードモードです。<br />
-                    以下のプラグインがインストールされます。<br />
+                    定番のSNS機能<br />
+                    スタンダードコミュニティ<br />
                     <br />
-                    <a rel="tooltip" title="日記機能を追加するプラグインです。">・opDiaryPlugin</a><br />
-                    <a rel="tooltip" title="スキンを変更するプラグインです。">・opSkinUnitedPlugin</a><br />
-                    <a rel="tooltip" title="コミュニティを拡張し、トピックやイベントを追加するプラグインです">・opCommunityTopicPlugin</a><br />
-                    <a rel="tooltip" title="アクティビティをさらに便利に使うためのプラグインです">・opTimelinePlugin</a><br />
-                    <a rel="tooltip" title="特定の人にメッセージを送ることが出来るプラグインです">・opMessagePlugin</a><br />
+                    <p>● 日記、掲示板、タイムラインなどの一般的な機能を持ったSNSを、</p>
+                    <p>参加者を限定し、プライベートに運用することができます。</p>
                   </span>
                   <span id="renrakumou-mode">
-                    小学校の連絡網／緊急連絡網を提供するプラグインです<br />
+                    音声合成＆「読んだ」確認<br />
+                    緊急連絡コミュニティ<br />
                     <br />
-                    ・opRenrakumouPlugin<br />
+                    <p>● 連絡文章をテキストで作成し、送信先を登録するだけ。</p>
+                    <p>● 電話とメールで連絡共有、「読んだ！」確認もできます。</p>
+                    <p>● 最大40人同時発信。</p>
                   </span>
                   <span id="chat-mode">
-                    チャット機能を加えるプラグインです<br />
+                    チャットコミュニティ<br />
                     <br />
-                    ・opChatTaskPlugin<br />
+                    <p>● SNSの中で作ったグループで、チャットすることができます。</p>
                   </span>
                   <div id="description-default">
                     <ul>
@@ -107,11 +100,11 @@
           <div class="options">
             <label class="left" id="mode-select">Mode Select</label>
             <select id="select-mode" name="mode">
-              <option value="plane" selected> プレーン</option><br />
+              <option value="plane" selected> プレーンコミュニティ</option><br />
               <option value="support"> サポートコミュニティ</option><br />
-              <option value="standard"> スタンダード</option><br />
-              <option value="renrakumou"> 緊急連絡網</option><br />
-              <option value="chat"> チャット</option><br />
+              <option value="standard"> スタンダードコミュニティ</option><br />
+              <option value="renrakumou"> 緊急連絡網コミュニティ</option><br />
+              <option value="chat"> チャットコミュニティ</option><br />
             </select>
             <br /><br />
           </div>
@@ -133,7 +126,7 @@
     </div>
     </div>
 
-    <div id="Footer">
+    <footer class="white navbar-fixed-bottom" style="padding: 5px 5px; height: 18px;">
       <div id="photoCredit">
         <p>photo by : <a target="_blank" href="http://www.bahnbilder.ch">Kabelleger / David Gubler</a></p>
       </div>
@@ -144,7 +137,7 @@
           Powered by <a href="http://www.openpne.jp/" target="_blank">OpenPNE</a>
         </p>
       </div>
-    </div>
+    </footer>
 
     <script type="text/javascript" charset="UTF-8" src="js/jquery.js"></script>
     <script type="text/javascript" charset="UTF-8" src="js/bootstrap.js"></script>
