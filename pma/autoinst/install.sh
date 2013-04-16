@@ -492,7 +492,7 @@ check_domain_list
 install_pne
 
 set_mail_conf
-set_cron_conf
+#set_cron_conf #cron処理が重く、バースデーメール・デイリーメールは必要ないとの判断なのでコメントアウト
 
 member_pass=$(set_pne_member)
 admin_pass=$(set_pne_admin)
