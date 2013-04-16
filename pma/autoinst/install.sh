@@ -144,7 +144,7 @@ function set_pne_config(){
   sed -i "s/smtp\.example\.com/${G_HOSTNAME}/" ./config/OpenPNE.yml
   sed -i "s/example\.com/${G_HOSTNAME}/" ./config/OpenPNE.yml
 
-#  sed -i "s/\#RewriteBase/RewriteBase/" ./web/.htaccess
+  sed -i "s/\#RewriteBase/RewriteBase/" ./web/.htaccess
   echo "session_save_path: \"/var/lib/php/${G_HOSTNAME}\"" |  cat >> config/OpenPNE.yml
   ln -s "web" "public_html"
 }
