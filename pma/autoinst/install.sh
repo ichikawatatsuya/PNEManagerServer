@@ -166,7 +166,7 @@ function install_pne(){
   pne_log "start install OpenPNE to ${G_SNSDIR}/${G_HOSTNAME}"
 
   #local PNESRC=/opt/tejimaya/openpne/openpne3_gyoen.pne.jp
-  local PNESRC=/opt/tejimaya/openpne/Openpne3
+  local PNESRC=/opt/tejimaya/openpne/OpenPNE3
   LOGFILE=$G_DATABASE.log
 
   if [ -e "${G_SNSDIR}/${G_HOSTNAME}" ]; then
@@ -316,6 +316,7 @@ INSERT INTO plugin (name, is_enabled, created_at, updated_at) values
 ("opSkinUnitedPlugin", "1", NOW(), NOW());
 EOF
 
+  case $G_INSTALL_OPTIONS in
     "plane") mysql $ARGS <<EOF
 UPDATE plugin SET is_enabled = "1" where name = "opLikePlugin" OR name = "opTimelinePlugin";
 EOF
