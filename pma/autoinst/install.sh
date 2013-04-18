@@ -6,12 +6,12 @@ G_DATABASE=`echo "${G_HOSTNAME}" | sed -e 's/[\.-]/_/g'`
 
 G_ADMIN_EMAIL=$2
 G_INSTALL_OPTIONS=$3
-G_SITE_DOMAIN="SITE_DOMAIN"
+G_PMS_INSTALL_DIR="INSTALL_DIR"
 #G_TARGET=NULL
 G_TARGET="master"
 G_SNSDIR=/var/www/sites
-G_DBCONF_FILE=/var/www/sites/$G_SITE_DOMAIN/pma/autoinst/db.conf
-G_USED_DOMAIN_LIST_FILE=/var/www/sites/$G_SITE_DOMAIN/pma/autoinst/used_domain_list.txt
+G_DBCONF_FILE=${G_PMS_INSTALL_DIR}/pma/autoinst/db.conf
+G_USED_DOMAIN_LIST_FILE=${G_PMS_INSTALL_DIR}/pma/autoinst/used_domain_list.txt
 G_EXEC_USER="admin"
 
 function pne_log(){
@@ -398,8 +398,8 @@ set_install_options
 
 php symfony project:clear-controllers
 
-echo "$G_HOSTNAME" >> /var/www/sites/$G_SITE_DOMAIN/pma/autoinst/used_domain_list.txt
-echo "$G_HOSTNAME" >> /var/www/sites/$G_SITE_DOMAIN/pma/autoinst/installed_domain_list.txt
+echo "$G_HOSTNAME" >> ${G_PMS_INSTALL_DIR}/pma/autoinst/used_domain_list.txt
+echo "$G_HOSTNAME" >> ${G_PMS_INSTALL_DIR}/pma/autoinst/installed_domain_list.txt
 
 pne_log "OpenPNE installation and settings is completed" "info"
 echo "${member_pass} ${admin_pass}"
