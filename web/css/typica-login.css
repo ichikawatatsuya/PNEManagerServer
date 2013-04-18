@@ -442,10 +442,6 @@ footer.navbar-fixed-bottom {
   width: 150px;
 }
 
-
-#plane-mode, #business-mode, #game-mode , #renrakumou-mode, #all-mode, #googleApps-mode, #ldap-mode {
-}
-
 html, body {
   min-height: 80%;
   height: 91.5%;
@@ -457,6 +453,7 @@ html, body {
 }
 
 #mode-description > span {
+  padding-top: 20px;
   display: none;
 }
 
@@ -465,11 +462,11 @@ html, body {
 }
 
 #mode-description > span > p {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #mode-description {
-  padding-top: 40px;
+  padding-top: 60px;
   float: left;
   width: 100%;
   color: white;
