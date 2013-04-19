@@ -7,8 +7,8 @@ require 'syslog'
 
 log = Logger.new(STDOUT)
 
-pmshost = 'pms_domain'
-pmahost = 'pma_domain'
+pmshost = 'pne.cc'
+pmahost = 'pne.cc'
 
 #pmshost = 'ec2-46-51-229-175.ap-northeast-1.compute.amazonaws.com'
 #pmahost = 'ec2-46-51-229-175.ap-northeast-1.compute.amazonaws.com'
@@ -16,7 +16,7 @@ pmahost = 'pma_domain'
 Syslog.open();
 Syslog.info('start pma_notifier');
 log.info("start pma_notifer")
-if File.exist?("/tmp/.pmalock") then
+if File.exist?("/tmp/.pmalock_pne_cc") then
   Syslog.info('still run ');
   log.warn("still run")
   Syslog.info('exit pma_notifier');

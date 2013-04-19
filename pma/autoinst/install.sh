@@ -6,7 +6,7 @@ G_DATABASE=`echo "${G_HOSTNAME}" | sed -e 's/[\.-]/_/g'`
 
 G_ADMIN_EMAIL=$2
 G_INSTALL_OPTIONS=$3
-G_PMS_INSTALL_DIR="INSTALL_DIR"
+G_PMS_INSTALL_DIR="/opt/sabakan/PNEManagerServer/releases/20130418052311"
 #G_TARGET=NULL
 G_TARGET="master"
 G_SNSDIR=/var/www/sites

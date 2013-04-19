@@ -17,7 +17,7 @@ log = Logger.new(STDOUT)
 Syslog.open()
 Syslog.info('start pma')
  log.info("start pma")
-if File.exist?("/tmp/.pmalock") then
+if File.exist?("/tmp/.pmalock_pne_cc") then
   Syslog.info('still run ')
   log.warn("still run")
   Syslog.info('exit pma')
@@ -25,11 +25,11 @@ if File.exist?("/tmp/.pmalock") then
   exit
 end
 
-FileUtils.touch('/tmp/.pmalock')
+FileUtils.touch('/tmp/.pmalock_pne_cc')
 
-pmshost = 'pms_domain'
-pmahost = 'pma_domain'
-installScriptPlace = 'INSTALL_DIR/pma'
+pmshost = 'pne.cc'
+pmahost = 'pne.cc'
+installScriptPlace = '/opt/sabakan/PNEManagerServer/releases/20130418052311/pma'
 
 
 #installDomains = Dir::entries('/var/www/sites/') - ['.', '..', 'kick.smt.cqc.jp', 'PNEManagerServer', 'smt.cqc.jp', 'timeline.cqc.jp', 'pne.cqc.jp', 'symfony2.cqc.jp', 'cqc.jp', '_back_pne.cqc.jp', 'download?v=Symfony_Standard_Vendors_2.1.7.tgz']
@@ -117,4 +117,4 @@ Net::HTTP.start(pmshost) { |http|
 
 Syslog.info('end pma');
 log.info("end pma")
-FileUtils.rm('/tmp/.pmalock')
+FileUtils.rm('/tmp/.pmalock_pne_cc')
