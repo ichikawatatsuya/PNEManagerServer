@@ -27,9 +27,9 @@ end
 
 FileUtils.touch('/tmp/.pmalock')
 
-pmshost = 'pms_domain'
-pmahost = 'pma_domain'
-installScriptPlace = 'INSTALL_DIR/pma'
+pmshost = 'xpne.info'
+pmahost = 'xpne.info'
+installScriptPlace = '/var/www/sites/xpne.info/pma'
 
 
 #installDomains = Dir::entries('/var/www/sites/') - ['.', '..', 'kick.smt.cqc.jp', 'PNEManagerServer', 'smt.cqc.jp', 'timeline.cqc.jp', 'pne.cqc.jp', 'symfony2.cqc.jp', 'cqc.jp', '_back_pne.cqc.jp', 'download?v=Symfony_Standard_Vendors_2.1.7.tgz']
