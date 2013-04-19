@@ -5,10 +5,9 @@ var domainUrl = location.protocol + '//' + location.hostname + '/';
 
 var domainValid = false;
 var mailValid = false;
-var pfValid = false;
 var touValid = false;
 var enabled = function() {
-  if (domainValid && mailValid && pfValid && touValid) {
+  if (domainValid && mailValid && touValid) {
     $("#sendbutton2").removeAttr("disabled");
   } else {
     $("#sendbutton2").attr("disabled", "true");
@@ -61,15 +60,6 @@ $(function(){
       mailValid = true;
       enabled();
     }
-  });
-
-  $("#pfcheck").bind("click", function(e){
-    if($("#pfcheck").attr("checked") == null) {
-      pfValid = false;
-    } else  {
-      pfValid = true;
-    }
-    enabled();
   });
 
   $("#toucheck").bind("click", function(e){
