@@ -89,12 +89,14 @@ class SnsController extends BaseApiActionController
             $validator = $this->get('validator');
             $errors = $validator->validate($account);
 
+/*
             if (0 < count($errors))
             {
                 $response = $this->renderErrorJson(400, 'the email is not valid');
                 $response->headers->set('Access-Control-Allow-Origin', 'http://form.pne.cc, http://pmstest.tejimaya.net');
                 return $response;
             }
+*/
 
             $em->persist($account);
             $em->flush();
