@@ -32,9 +32,7 @@ pmahost = 'pma_domain'
 installScriptPlace = 'INSTALL_DIR/pma'
 
 
-#installDomains = Dir::entries('/var/www/sites/') - ['.', '..', 'kick.smt.cqc.jp', 'PNEManagerServer', 'smt.cqc.jp', 'timeline.cqc.jp', 'pne.cqc.jp', 'symfony2.cqc.jp', 'cqc.jp', '_back_pne.cqc.jp', 'download?v=Symfony_Standard_Vendors_2.1.7.tgz']
-
-installDomains = Dir::entries('/var/www/sites/') - ['.', '..', pmshost]
+installDomains = Dir::entries('SNS_DIR/') - ['.', '..', pmshost]
 
 installScript = installScriptPlace + "/autoinst/install.sh"
 deleteScript = installScriptPlace + "/autoinst/sns_delete.sh"
