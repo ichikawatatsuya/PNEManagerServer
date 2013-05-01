@@ -1,3 +1,0 @@
-test.pne.cc
-test2.pne.cc
-test3.pne.cc
