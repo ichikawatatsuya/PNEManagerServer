@@ -95,7 +95,10 @@ class ServerController extends BaseApiActionController
         {
             foreach ($server->getSnss() as $sns)
             {
-              $result['domain'][] = $sns->getDomain();
+                if ('accepted' === $sns->getStatus())
+                {
+                    $result['domain'][] = $sns->getDomain();
+                }
             }
         }
 
