@@ -20,7 +20,7 @@ $('#sendbutton2').click( function() {
 
 $(function(){
   $("#domain-form").bind("keyup", function(e) {
-    var re = new RegExp(/^[a-z0-9]{3,16}$/);
+    var re = new RegExp(/^([-~a-z0-9]+){3,16}$/);
     var isValid = re.test($("#domain-form").val());
     if (isValid) {
       $.ajax({
