@@ -396,7 +396,7 @@ admin_pass=$(set_pne_admin)
 
 set_install_options
 
-php symfony project:clear-controllers
+#php symfony project:clear-controllers
 
 echo "$G_HOSTNAME" >> ${G_PMS_INSTALL_DIR}/pma/autoinst/used_domain_list.txt
 echo "$G_HOSTNAME" >> ${G_PMS_INSTALL_DIR}/pma/autoinst/installed_domain_list.txt
